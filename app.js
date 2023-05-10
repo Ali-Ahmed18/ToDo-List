@@ -31,7 +31,6 @@ ulParent.appendChild(liElement)
 input.value = ""
 //////return editbutton for make editbutton////
 btnEdt = btnEdit
-liText = liTxt
 }
 
 function del(clr){
@@ -54,10 +53,3 @@ function edt(){
     }
     btnEdt.parentNode.previousSibling.nodeValue =  newValue
 }
-
-
-
-
-
-var maxLength = 25;
-var userData = -1;
