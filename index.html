@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="todo-container">
+            <h1>Todo App</h1>
+            <div class="toDoInput">
+                <input maxlength="19" id="input" type="text" placeholder="Add your new todo">
+                <button onclick="add()"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <ul id="ulParent">          
+            </ul>
+            <div class="bottom">
+                <p>You have <span id="num">0</span> pending task</p>
+                <button onclick="del()">Clear All</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
