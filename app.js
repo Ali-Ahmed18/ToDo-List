@@ -9,7 +9,7 @@ function add(){
     var btn = document.createElement("button")
     var liTxt = document.createTextNode(input.value)
     
-    if(!input.value){
+    if(!input.value || !input.value.trim()){
         return
     }
     ////////////setArrtibute///////////
@@ -18,7 +18,7 @@ function add(){
     btn.setAttribute("onclick","del(this)")
     var btnEdit = document.createElement("button")
     btnEdit.style.backgroundColor = "rgb(105, 161, 105)"
-    btnEdit.setAttribute("onclick","edt()")
+    btnEdit.setAttribute("onclick","edt(this)")
     btnEdit.innerHTML = "<i class='fa-sharp fa-solid fa-pen'></i>"
 
 /////////////////make append child//////////////
@@ -44,12 +44,12 @@ function del(clr){
     num.innerHTML = 0
 }
 
-function edt(){
-    var newValue = btnEdt.parentNode.previousSibling.nodeValue
-    var newValue1 = prompt("Edit:",newValue)
-    newValue = newValue1
-    if(!newValue){
+function edt(condition){
+   var oldValue = condition.parentNode.previousSibling.nodeValue
+   var newValue1 = prompt("Edit:",oldValue)
+    
+    if(!newValue1){
         return
     }
-    btnEdt.parentNode.previousSibling.nodeValue =  newValue
+    condition.parentNode.previousSibling.nodeValue = newValue1
 }
